@@ -55,3 +55,13 @@ plt.xlim(1.5, 2.3)
 plt.legend()
 plt.savefig('WS2 PL fit.png', dpi=300, bbox_inches='tight')
 plt.show()
+
+# Salvando os parâmetros relevantes
+# Arquivo txt com
+# Amostra \t Pico \t desvio
+
+with open("PL peaks.txt", "w") as f:
+    f.write(f"Sample\tPeak (eV)\twidth\n")
+    f.write(f"MoS2\t{pars1[2]}\t{pars1[3]}\n")
+    f.write(f"WS2\t{pars2[1]}\t{pars2[2]}")
+
